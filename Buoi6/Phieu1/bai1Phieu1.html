@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 5px;
+          margin: auto;
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <table border="1"  style="background-color: pink; " >
+        <tr>
+            <td colspan="2">Chương trình tra tuổi</td>
+        </tr>
+        <tr>
+            <td>Tuổi dương lịch</td>
+            <td>
+                <input id="duongLich" type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td>Tuổi âm lịch</td>
+            <td>
+                <input id="amLich" type="text" value="">
+            </td>
+        </tr>
+        <tr >
+            <td colspan="2"  >
+                <input onclick="clear()" type="submit" value="Xóa">
+                <input onclick="tracuu()"  type="submit" value="Tra cứu">
+            </td>
+            
+        </tr>
+    </table>
+    <script>
+        var can = ["Canh", "Tân", "Nhâm", "Quí", "Giáp", "Ất", "Binh", "Đinh", "Mậu", "Kỷ"];
+        var chi = ["Thân", "Dậu", "Tuất", "Hợi", "Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi"];
+
+        function tracuu(){
+            var tmp = document.getElementById("duongLich");
+            var x = parseInt(tmp.value);
+            var tmpCan = can[x % 10];
+            var tmpChi = chi[parseInt((x % 100) % 12)];
+            document.getElementById("amLich").value = tmpCan + " " + tmpChi;
+        }
+        function clear(){
+            document.getElementById("duongLich").value = ""
+            document.getElementById("amLich").value = ""
+        }
+    </script>
+</body>
+</html>
