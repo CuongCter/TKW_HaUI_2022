@@ -18,47 +18,41 @@ header img{
 /* .nav{
     background-color: aquamarine;
 } */
-
-.menu {
-    display: flex;
-    flex-direction: column;
+nav ul{
+    display:flex;
+    list-style-type:none;
+    background-color:blue;
+    height:30px;
+    justify-content:space-around;
     
+
 }
-.menu > li {
-    position: relative;
-    padding: 20px;
-    list-style: none;
-    width: 200px;
-    background-color: rgb(115, 243, 149);
-    border-top: 1px solid white;
+nav a{
+    text-decoration:none;
+    color:white;
+    line-height:30px;
+    display:inline-block;
+    padding:0px 10px;
 }
-.menu > li:hover {
-    background-color: rgb(78, 104, 198);
+nav a:hover{
+    background-color:red;
 }
-.menu > li  a {
-    text-decoration: none;
-    color: #000;
+.cha{
+    position:relative;	
 }
-.menu-child {
-    position: absolute;
-    top: 0;
-    left: 200px;
-    list-style: none;
-    width: 200px;
-    background-color: rgb(101, 245, 204);
-    display: none;
-}
-li:hover .menu-child {
-    display: block;
-}
-.menu-child > li {
-    padding: 20px;
-    border-top: 1px solid rgb(105, 105, 105);
-}
-.menu-child > li:hover {
-    background-color: red;
+.con{
+    
+    position:absolute;
+    width:300px;
+    height:30px;
+    display:none;
+    left:0px;
+    background-color:red;
 }
 
+.cha:hover .con{
+    display:flex;
+}
 .content{
     display: flex;
     margin-top: 30px;
