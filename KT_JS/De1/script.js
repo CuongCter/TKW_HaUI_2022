@@ -9,7 +9,6 @@ function myFunction() {
     // address.value = FormString(address.value);
     
 }
-
 function FormString(str) {
     let strNew = str;
 
