@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.cha{
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+    height: 150vh;
+
+}
+div{
+    height: 30px;
+}
+.tren{
+    background-color: aqua;
+    position: relative;
+    
+}   
+.giua{
+    background-color: blanchedalmond;
+    /* position: absolute; */
+    bottom: 0;
+
+}
+.duoi{
+    background-color: rgb(243, 149, 8);
+    /* position: absolute; */
+    position: fixed;
+     width: 50px;
+    top: 0;
+}

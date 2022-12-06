@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        .content{
+            /* width: 60%; */
+            margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <div class="content">
+        <h1>tính tiền điện</h1>
+        <table border="0">
+            <tr>
+                <th class="left" >Số cũ</th>
+            <th><input type="number" id="socu"></th>
+            </tr>
+            <br>
+            <tr>
+                <th class="left">Số mới:</th>
+                <th><input type="number" id="somoi"></th>
+    
+            </tr>
+            <br>
+            <tr>
+                <th class="left">
+                    Giá điện:
+                </th>
+                <th><input type="number" id="gia"></th>
+                
+            </tr>
+            <br>
+            <tr>
+                <th class="left">Tiền điện</th>
+                <th><input type="number" id="kq"></th>
+    
+            </tr>
+            <br>
+            <tr>
+                <th class="left">Điện dùng cho: </th>
+                <th><input type="text" id="dung"></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align: center;"><input type="submit" value="Tính" onclick="myFuntion()"></td>
+            </tr>
+        </table>
+        </div>
+   
+
+    <script>
+        function myFuntion() {
+            var cu = document.getElementById('socu').value;
+            var moi = document.getElementById('somoi').value;
+            var giadien = document.getElementById('gia').value;
+            // var tien = document.getElementById('kq');
+            // var sudung = document.getElementById('dung');
+            if(giadien < 1 || giadien >150){
+                window.alert(" moi nhap lai");
+                giadien = 0;
+            } else{
+                var tien = (moi - cu ) * giadien;
+                document.getElementById('kq').value = tien;
+                if(tien > 1000){
+                document.getElementById('dung').value = "Kinh doanh";
+             }else{
+            document.getElementById('dung').value = "Gia đình";
+        }
+            }
+           
+        }
+       
+    </script>
+</body>
+</html>
